@@ -54,7 +54,7 @@ output "cluster_port" {
 output "cluster_master_password" {
   description = "The database master password"
   value       = try(aws_rds_cluster.this[0].master_password, "")
-  sensitive   = true
+  sensitive   = false
 }
 
 output "cluster_master_username" {
